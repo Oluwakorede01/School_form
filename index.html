@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Forms and Validation</title>
+  </head>
+  <body>
+    <div id="form-wrap">
+      <form
+        action="entry form"
+        id="entry form"
+        action="processor.html"
+        method="post"
+      >
+        <fieldset>
+          <legend>
+            <strong> Basic Information </strong>
+          </legend>
+          <div id="input">
+            <p>
+              <label for="textUsername" type="textUsername">Username:</label>
+              <input
+                type="text"
+                name="txtUsername"
+                id="txtUsername"
+                value=""
+                maxlength="8"
+              />
+            </p>
+          </div>
+
+          <div id="input">
+            <p>
+              <label for="userPassword" type="userPassword">Password:</label>
+              <input
+                type="password"
+                name="userPassword"
+                id="userPassword"
+                value=""
+                maxlength="10"
+              />
+            </p>
+          </div>
+
+          <div id="input">
+            <p>
+              <label for="rdbgender">Gender</label>
+              <input type="radio" name="rdbGender" id="rdbGender" value="m" />
+              Male
+
+              <label for="rdbgender">Gender</label>
+              <input type="radio" name="rdbGender" id="rdbGender" value="f" />
+              Female
+            </p>
+          </div>
+
+          <div id="input">
+            <p>
+              <label for="userHobbies" type="userHobbies">Hobbies </label>
+              <input
+                type="checkbox"
+                name="userHobbies"
+                id="userHobbies"
+                value="m"
+                checked
+              />Music
+              <input
+                type="checkbox"
+                type="userHobbies"
+                id="userHobbies"
+                value="d"
+              />Dancing
+              <input
+                type="checkbox"
+                name="userHobbies"
+                id="userHobbies"
+                value="h"
+              />Hiking
+            </p>
+          </div>
+
+          <div id="input">
+            <p>
+              <label for="userAddress">Address:</label>
+              <textarea
+                name="userAddress"
+                id="userAddress"
+                rows="5"
+                cols="30"
+                wrap="hard"
+              ></textarea>
+            </p>
+          </div>
+
+          <div id="input">
+            <p>
+              <label for="slctQualification">Qualification</label>
+              <select name="slctQualification" id="slctQualification">
+                <option value="i">Intern</option>
+                <option value="j">Junior Dev</option>
+                <option value="s">Senior Dev</option>
+              </select>
+            </p>
+          </div>
+
+          <div id="input">
+            <input
+              type="submit"
+              name="submit btn"
+              id="submit btn"
+              value="SUBMIT"
+            />
+
+            <input
+              type="resetBtn"
+              name="resetBtn"
+              id="resetBtn"
+              value="RESET"
+            />
+
+            <a href="./school.html">Check for more..</a>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
