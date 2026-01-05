@@ -4,42 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+
     <title>School Form</title>
   </head>
+
   <body>
     <div id="form-div">
       <h1 class="header">School Championship Registration Form</h1>
 
-      <form action="processor.html">
+       <!-- without return added to the validate function, the browser will ignore the false and the true boolean will only be active and the form will submit even when it is empty which is not proper -->
+
+      <form
+        action="./processor.html"
+        method="get" 
+        id="studentRegForm"
+        name="studentRegForm"
+        onsubmit="return validate()"
+        onreset="resetForm()"
+      >
         <p>
-          <label for="Reg">School name:<span style="color: red">*</span></label>
+          <label for="txtSchoolName">School name:<span style="color: red">*</span></label> <br>
+         
         </p>
 
         <div id="input">
-          <input type="text" id="Reg" value="" style="width: 600px" />
+          <input type="text" id="txtSchoolName" value="" placeholder="Enter School name" name="txtSchoolName" style="width: 600px" />
+
         </div>
 
+        
+           <span id="spnIsSchoolNameValid"></span>
+           
+
         <p>
-          <label for="Reg"
+          <label for="studentName"
             >Schooler name:<span style="color: red">*</span></label
           >
+         
         </p>
 
         <div id="input">
           <input
             type="text"
-            id="Reg"
+            id="firstName"
             value=""
             placeholder="First"
             style="width: 297px"
           />
           <input
             type="text"
-            id="Reg"
+            id="secondName"
             value=""
             placeholder="Second"
             style="width: 297px"
           />
+
+          <div id="span">
+
+               <span id="spnIsFirstNameValid"></span>
+           
+            <span id="spnIsSecondNameValid"></span>
+          </div>
+   
+
+
         </div>
 
         <p>
@@ -51,19 +79,24 @@
         <div id="input">
           <input
             type="text"
-            id="parentName"
+            id="parentFirstName"
             value=""
             placeholder="First"
             style="width: 297px"
           />
           <input
             type="text"
-            id="parentName"
+            id="parentSecondName"
             value=""
             placeholder="Second"
             style="width: 297px"
           />
         </div>
+
+       <div id="span">
+         <span id="spnIsParentFirstNameValid"></span>
+        <span id="spnIsParentSecondNameValid"></span>
+       </div>
 
         <p>
           <label for="parentPhone"
@@ -73,37 +106,49 @@
 
         <div id="input">
           <input
-            type="text"
+            type="number"
             id="parentPhone"
             placeholder="######"
             style="width: 600px"
           />
         </div>
 
+        <span id="spnIsParentPhoneValid"></span>
+
+
         <p>
-          <label for="parentEmail">Parent email</label>
+          <label for="parentEmail">Parent email<span style="color: red">*</span></label>
         </p>
 
         <div id="input">
           <input type="email" id="parentEmail" style="width: 600px" />
         </div>
+        <span id="spnIsParentEmailValid"></span>
 
         <p>
-          <label for="parentSport"
-            >Parent sport:<span style="color: red">*</span></label
+          <label for="preferredSport"
+            >Preferred sport:<span style="color: red">*</span></label
           >
         </p>
 
         <div id="input">
-          <input type="text" id="parentSport" value="" style="width: 600px" />
+          <input type="text" id="preferredSport" value="" style="width: 600px" />
         </div>
+
+         <span id="spnIsPreferredSportValid"></span>
+
 
         <div>
           <input type="submit" id="submitBtn" value="SUBMIT" />
-          <button><a href="./index.html"> Go Back </a></button>
-          >
+          
+          <input type="reset" id="resetbtn" value="RESET">
         </div>
+
       </form>
     </div>
+
+
+          <script src="./script.js">
+          </script>
   </body>
 </html>
