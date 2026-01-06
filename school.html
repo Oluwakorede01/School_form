@@ -22,6 +22,8 @@
         onsubmit="return validate()"
         onreset="resetForm()"
       >
+
+      <!-- School Name -->
         <p>
           <label for="txtSchoolName">School name:<span style="color: red">*</span></label> <br>
          
@@ -36,6 +38,8 @@
            <span id="spnIsSchoolNameValid"></span>
            
 
+           <!-- Student Name -->
+
         <p>
           <label for="studentName"
             >Schooler name:<span style="color: red">*</span></label
@@ -47,6 +51,7 @@
           <input
             type="text"
             id="firstName"
+            name="firstName"
             value=""
             placeholder="First"
             style="width: 297px"
@@ -54,6 +59,7 @@
           <input
             type="text"
             id="secondName"
+            name="secondName"
             value=""
             placeholder="Second"
             style="width: 297px"
@@ -70,6 +76,8 @@
 
         </div>
 
+        <!-- Parent Name -->
+
         <p>
           <label for="parentName"
             >Parent name:<span style="color: red">*</span></label
@@ -80,6 +88,7 @@
           <input
             type="text"
             id="parentFirstName"
+            name="parentFirstName"
             value=""
             placeholder="First"
             style="width: 297px"
@@ -87,6 +96,7 @@
           <input
             type="text"
             id="parentSecondName"
+            name="parentSecondName"
             value=""
             placeholder="Second"
             style="width: 297px"
@@ -98,6 +108,8 @@
         <span id="spnIsParentSecondNameValid"></span>
        </div>
 
+
+       <!-- Parent Phone  -->
         <p>
           <label for="parentPhone"
             >Parent phone:<span style="color: red">*</span></label
@@ -108,6 +120,7 @@
           <input
             type="number"
             id="parentPhone"
+            name="parentPhone"
             placeholder="######"
             style="width: 600px"
           />
@@ -116,14 +129,18 @@
         <span id="spnIsParentPhoneValid"></span>
 
 
+        <!-- Parent Email -->
         <p>
           <label for="parentEmail">Parent email<span style="color: red">*</span></label>
         </p>
 
         <div id="input">
-          <input type="email" id="parentEmail" style="width: 600px" />
+          <input type="email" id="parentEmail" name="parentEmail" style="width: 600px" />
         </div>
         <span id="spnIsParentEmailValid"></span>
+
+
+        <!-- Preferred Sport  -->
 
         <p>
           <label for="preferredSport"
@@ -132,11 +149,42 @@
         </p>
 
         <div id="input">
-          <input type="text" id="preferredSport" value="" style="width: 600px" />
+          <input type="text" id="preferredSport" name="preferredSport" value="" style="width: 600px" />
         </div>
 
          <span id="spnIsPreferredSportValid"></span>
 
+
+<!-- Student Password -->
+ <p>
+          <label for="studentPassword"
+            >Student Password:<span style="color: red">*</span></label
+          >
+        </p>
+
+          <div id="input">
+          <input type="password" id="studentPassword" name="studentPassword" value=""  placeholder="password"     style="width: 600px"  />
+        </div>
+
+         <span id="spnIsStudentPasswordValid"></span>
+
+         <!-- Confirm Password -->
+
+
+          <p>
+          <label for="confirmPassword"
+            >Confirm-password:<span style="color: red">*</span></label
+          >
+        </p>
+
+ <div id="input">
+          <input type="password" id="confirmPassword"   placeholder="confirm-password" name="confirmPassword" value=""           style="width: 600px" />
+        </div>
+
+         <span id="spnIsConfirmPasswordValid"></span>
+
+
+ <!-- Submit and Reset button -->
 
         <div>
           <input type="submit" id="submitBtn" value="SUBMIT" />

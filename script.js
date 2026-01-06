@@ -2,14 +2,16 @@
 
 function validate(){
 
-let isSchoolNameValid=true;
-let isStudentFistNameValid=true;
-let isStudentSecondNameValid =true;
+let isSchoolNameValid= true;
+let isStudentFistNameValid= true;
+let isStudentSecondNameValid= true;
 let isParentFirstNameValid= true;
 let isParentSecondNameValid= true;
-let isParentPhoneValid = true;
+let isParentPhoneValid= true;
 let isParentEmailValid= true;
-let isPreferredSportValid = true;
+let isPreferredSportValid= true;
+let isStudentPasswordValid= true;
+let isConfirmPasswordValid= true;
 
 
 // alert((document.getElementById("txtSchoolName").value))
@@ -188,13 +190,66 @@ isPreferredSportValid= false;
 
 
 
+  // Student Password
+
+   if(document.getElementById("studentPassword").value == ""){
+
+isStudentPasswordValid= false;
+
+  document.getElementById("spnIsStudentPasswordValid").innerHTML="Please enter password";
+
+  document.getElementById("spnIsStudentPasswordValid").style.color="red";
+
+  }
+
+  else
+
+  {
+    isStudentPasswordValid= true;
+
+      document.getElementById("spnIsStudentPasswordValid").innerHTML="Valid";
+
+       document.getElementById("spnIsStudentPasswordValid").style.color="green";
+  }
 
 
+  // Confirm password
 
 
+   if(document.getElementById("confirmPassword").value == ""){
+
+ isConfirmPasswordValid= false;
+
+  document.getElementById("spnIsConfirmPasswordValid").innerHTML="Please re-enter password";
+
+  document.getElementById("spnIsConfirmPasswordValid").style.color="red";
+
+  }
+  
+else if( document.getElementById("confirmPassword").value != document.getElementById("studentPassword").value)
+{
+
+  isConfirmPasswordValid= false;
+
+  document.getElementById("spnIsConfirmPasswordValid").innerHTML="Please re-enter password";
+
+  document.getElementById("spnIsConfirmPasswordValid").style.color="red";
 
 
-  if(isSchoolNameValid == false || isStudentFistNameValid == false || isStudentSecondNameValid == false|| isParentFirstNameValid == false || isParentSecondNameValid ==false || isParentPhoneValid == false || isParentEmailValid == false || isPreferredSportValid){
+}
+  else 
+
+  {
+     isConfirmPasswordValid= true;
+      document.getElementById("spnIsConfirmPasswordValid").innerHTML="Valid";
+
+       document.getElementById("spnIsConfirmPasswordValid").style.color="green";
+  }
+
+  
+
+
+  if(isSchoolNameValid == false || isStudentFistNameValid == false || isStudentSecondNameValid == false|| isParentFirstNameValid == false || isParentSecondNameValid ==false || isParentPhoneValid == false || isParentEmailValid == false || isPreferredSportValid == false || isStudentPasswordValid == false ||  isConfirmPasswordValid == false){
     
     return false;
   }
@@ -218,6 +273,8 @@ function resetForm(){
   document.getElementById("spnIsParentPhoneValid").innerHTML="";
   document.getElementById("spnIsParentEmailValid").innerHTML="";
   document.getElementById("spnIsPreferredSportValid").innerHTML="";
+  document.getElementById("spnIsStudentPasswordValid").innerHTML="";
+  document.getElementById("spnIsConfirmPasswordValid").innerHTML="";
    
 }
 
